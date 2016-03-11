@@ -1,0 +1,25 @@
+        list.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {
+            @Override
+            public ListCell<String> call(ListView<String> list) {
+                return new AttachmentListCell();
+            }
+        });
+
+        stage.show();
+    }
+
+    private static class AttachmentListCell extends ListCell<String> {
+        @Override
+        public void updateItem(String item, boolean empty) {
+            super.updateItem(item, empty);
+            if (empty) {
+                setGraphic(null);
+                setText(null);
+            } else {
+                Image fxImage = getFileIcon(item);
+                ImageView imageView = new ImageView(fxImage);
+                setGraphic(imageView);
+                setText(item);
+            }
+        }
+    }

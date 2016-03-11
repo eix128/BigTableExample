@@ -1,0 +1,15 @@
+3D javafx özelliği eklemek için
+https://github.com/Birdasaur/FXyz
+
+
+Her Text e bastığında ,
+try {
+	TableView get original items
+	TableView set blank item
+	TableView disable , stackpane ile önüne loading screen gelecek
+
+    prepare query
+	JPA Query if(! blank TextField.getText) && if(! blank Date.getDate() )
+} finally {
+	Tableview set original items
+}
